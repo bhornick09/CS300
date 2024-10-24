@@ -1,0 +1,32 @@
+// Big O Evaluation 
+
+Vector: 
+loadFile 
+Open file = 0(1) 
+While loop worst case is finishing entire loop 0(n) 
+Split lines 0(1) 
+CreateCourseObject 0(1)(the time createCourseObject takes) 
+
+Total: 0(n) in worst case  
+
+
+Hash Table: 
+loadFile 
+Open file = 0(1) 
+While loop worst case is finishing entire loop 0(n) 
+Split lines 0(1) 
+Check for prerequesites 0(n) in worst case (hash collisions) 
+CreateCourseObject 0(1)(the time createCourseObject takes) 
+
+Total: 0(n^2) in worst case if while loop finishes and hash collisions exist 
+
+
+Binary Search Tree: 
+loadFile 
+Open file = 0(1) 
+While loop worst case is finishing entire loop 0(n) 
+Split lines 0(1) 
+Check for prerequesites 0(n) in worst case (unbalanced tree) 
+CreateCourseObject 0(1)(the time createCourseObject takes) 
+
+Total: 0(n^2) in worst case if while loop finishes and tree is unbalanced. 
