@@ -1,0 +1,22 @@
+// Print all courses alphanumerically
+void HashTable::PrintAll() {
+    vector<Course> courses; // temporary holder
+    // loop through all courses to store into the vector
+    for (auto node : nodes) {
+        while (node != nullptr) {
+            courses.push_back(node->course); // add course to vector
+            node = node->next; // next node
+        }
+    }
+    // sort courses alphanumerically by course number
+    sort(courses.begin(), courses.end(), [](const Course& a, const Course& b) {
+        return a.courseNumber < b.courseNumber; // sort by the course number
+    });
+
+    // print the sorted courses
+    cout << "Here are the courses sorted alphanumerically: " << endl << endl;
+    for (const auto& course : courses) {
+        cout << "Course Number: " << course.courseNumber << ", ";
+        cout << "Course Name: " << course.courseName << endl;
+    }
+}
